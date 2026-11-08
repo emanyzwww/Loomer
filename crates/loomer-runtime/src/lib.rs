@@ -15,8 +15,8 @@
 //! # Layering
 //!
 //! ```text
-//! loomis (facade) ──> loomis-runtime ──> loomis-platform
-//!                            └─────────> loomis-core (types)
+//! loomer (facade) ──> loomer-runtime ──> loomer-platform
+//!                            └─────────> loomer-core (types)
 //! ```
 //!
 //! No type from the platform layer appears in a public signature except through [`Error`].

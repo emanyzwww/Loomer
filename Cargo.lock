@@ -521,39 +521,39 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "5d15f86d12da44cd8d4ec3c73984537eb7f4cadcb9776a575a0a8a05ca11005c"
 
 [[package]]
-name = "loomis"
+name = "loomer"
 version = "0.0.0"
 dependencies = [
- "loomis-core",
- "loomis-runtime",
+ "loomer-core",
+ "loomer-runtime",
 ]
 
 [[package]]
-name = "loomis-core"
+name = "loomer-core"
 version = "0.0.0"
 
 [[package]]
-name = "loomis-layout"
+name = "loomer-layout"
 version = "0.0.0"
 
 [[package]]
-name = "loomis-platform"
+name = "loomer-platform"
 version = "0.0.0"
 dependencies = [
- "loomis-core",
+ "loomer-core",
  "winit",
 ]
 
 [[package]]
-name = "loomis-render"
+name = "loomer-render"
 version = "0.0.0"
 
 [[package]]
-name = "loomis-runtime"
+name = "loomer-runtime"
 version = "0.0.0"
 dependencies = [
- "loomis-core",
- "loomis-platform",
+ "loomer-core",
+ "loomer-platform",
 ]
 
 [[package]]

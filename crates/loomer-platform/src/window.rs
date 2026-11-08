@@ -2,7 +2,7 @@
 //!
 //! [`Window`] wraps the backend window and exposes only the operations the framework needs, so the
 //! backend type stays inside this crate. Window *options* are plain data and live in
-//! `loomis_core::window`; this module holds the live handle only.
+//! `loomer_core::window`; this module holds the live handle only.
 
 /// A handle to a window created by [`run`](crate::run).
 ///

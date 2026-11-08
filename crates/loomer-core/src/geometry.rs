@@ -22,7 +22,7 @@
 /// # Examples
 ///
 /// ```
-/// use loomis_core::geometry::Size;
+/// use loomer_core::geometry::Size;
 ///
 /// let available = Size::new(800.0, 600.0);
 /// assert_eq!(available.width, 800.0);
@@ -50,7 +50,7 @@ impl Size {
     /// This is a `const fn`, so it can be used to define constants:
     ///
     /// ```
-    /// use loomis_core::geometry::Size;
+    /// use loomer_core::geometry::Size;
     ///
     /// const DEFAULT_WINDOW: Size = Size::new(800.0, 600.0);
     /// assert_eq!(DEFAULT_WINDOW, Size::new(800.0, 600.0));
@@ -67,7 +67,7 @@ impl Size {
 /// # Examples
 ///
 /// ```
-/// use loomis_core::geometry::Point;
+/// use loomer_core::geometry::Point;
 ///
 /// let p = Point { x: 12.0, y: 8.0 };
 /// assert_eq!(p.x, 12.0);
@@ -90,7 +90,7 @@ pub struct Point {
 /// # Examples
 ///
 /// ```
-/// use loomis_core::geometry::Rect;
+/// use loomer_core::geometry::Rect;
 ///
 /// let bounds = Rect { x: 16.0, y: 8.0, width: 200.0, height: 40.0 };
 /// assert_eq!(bounds.x + bounds.width, 216.0);

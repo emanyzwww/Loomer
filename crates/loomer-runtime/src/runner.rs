@@ -3,8 +3,8 @@
 //! [`run`] hands its `Runner` to the platform layer. The runner receives lifecycle callbacks and,
 //! for now, only asks for the first frame.
 
-use loomis_core::window::WindowOptions;
-use loomis_platform::{AppHandler, Event, Window};
+use loomer_core::window::WindowOptions;
+use loomer_platform::{AppHandler, Event, Window};
 
 use crate::error::{Error, Result};
 
@@ -17,7 +17,7 @@ use crate::error::{Error, Result};
 ///
 /// Returns [`Error::Platform`] when the platform layer cannot create or run the event loop.
 pub fn run(options: WindowOptions) -> Result<()> {
-    loomis_platform::run(Box::new(Runner), options).map_err(Error::Platform)
+    loomer_platform::run(Box::new(Runner), options).map_err(Error::Platform)
 }
 
 /// Receives platform callbacks for one application.

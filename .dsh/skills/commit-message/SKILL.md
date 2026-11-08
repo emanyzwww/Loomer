@@ -1,6 +1,6 @@
 ---
 name: commit-message
-description: "Generate English Conventional Commits messages for Loomis, a Rust desktop GUI framework, with a Chinese mirror for review; scope is derived from paths and the range can be limited or excluded."
+description: "Generate English Conventional Commits messages for Loomer, a Rust desktop GUI framework, with a Chinese mirror for review; scope is derived from paths and the range can be limited or excluded."
 whenToUse: "Use when the user asks for a commit message, commit info, or commit summary, or says 'help me commit'."
 ---
 
@@ -12,7 +12,7 @@ identical structure and content.
 - The English block is the only content to commit.
 - The Chinese block is for line-by-line review and never enters version control.
 
-Loomis is a Rust desktop GUI framework organized as a workspace of packages.
+Loomer is a Rust desktop GUI framework organized as a workspace of packages.
 Do not commit, modify files, or explain.
 
 ## 1. Output Format
@@ -157,7 +157,7 @@ Pick the dominant one when several apply. Code comments and rustdoc follow their
 
 Derive scope from the path; never hard-code package names:
 
-- Under a `Cargo.toml` with `[package]`: use the package name without the project prefix `loomis-`. If the package name
+- Under a `Cargo.toml` with `[package]`: use the package name without the project prefix `loomer-`. If the package name
   equals the project name (public facade), use `api`.
 - Outside any package: root build/tooling config → `config`; `README.md` and `docs/` → `docs`; `examples/` → `examples`;
   `.github/` → `ci`; skills and ignore rules → `chore`.
@@ -165,7 +165,7 @@ Derive scope from the path; never hard-code package names:
 - Across packages use the dominant one; use a comma only when they tie: `core,runtime`.
 - A package's own `Cargo.toml` belongs to that package's scope.
 
-Never invent scopes from features. Example: `crates/loomis-layout/src/lib.rs` → `layout`; `loomis/src/lib.rs` → `api`.
+Never invent scopes from features. Example: `crates/loomer-layout/src/lib.rs` → `layout`; `loomer/src/lib.rs` → `api`.
 
 ### Subject
 

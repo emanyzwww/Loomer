@@ -20,7 +20,7 @@
 /// # Examples
 ///
 /// ```
-/// use loomis_core::color::Color;
+/// use loomer_core::color::Color;
 ///
 /// let red = Color::rgba(1.0, 0.0, 0.0, 1.0);
 /// assert_eq!(red.r, 1.0);
@@ -54,7 +54,7 @@ impl Color {
     /// This is a `const fn`, so it can be used to define constants:
     ///
     /// ```
-    /// use loomis_core::color::Color;
+    /// use loomer_core::color::Color;
     ///
     /// const BACKGROUND: Color = Color::rgba(0.12, 0.12, 0.16, 1.0);
     /// assert_eq!(BACKGROUND.a, 1.0);

@@ -33,7 +33,7 @@ When an API is missing, do not describe its absence. Either it exists and is doc
 
 Do not name, cite, compare with, or borrow terminology from other frameworks, UI toolkits, or projects.
 
-- Say what Loomis does, in Loomis terms.
+- Say what Loomer does, in Loomer terms.
 - No "X-style", "similar to Y", "unlike Z".
 - Zero external product names in comments.
 
@@ -53,7 +53,7 @@ Public-but-internal items are documented and marked with a blockquote on the fir
 ///
 /// > **Framework-internal.** Not part of the public API.
 /// >
-/// > `loomis-runtime` needs the component instance back in order to drive rendering.
+/// > `loomer-runtime` needs the component instance back in order to drive rendering.
 pub fn take_component(&mut self) -> Option<Box<dyn Component>>
 ```
 

@@ -21,7 +21,7 @@
 //! ```
 //!
 //! Components only *describe* their UI. How the tree gets laid out and drawn, and when a component
-//! has to be rendered again, is decided by `loomis-runtime`.
+//! has to be rendered again, is decided by `loomer-runtime`.
 
 /// A reusable UI unit.
 ///
@@ -38,7 +38,7 @@
 /// # Examples
 ///
 /// ```
-/// use loomis_core::element::{Component, Element};
+/// use loomer_core::element::{Component, Element};
 ///
 /// struct Hello;
 ///
@@ -79,7 +79,7 @@ impl Element {
     /// no visual output.
     ///
     /// ```
-    /// use loomis_core::element::Element;
+    /// use loomer_core::element::Element;
     ///
     /// let element = Element::empty(); // draws nothing
     /// ```
@@ -91,7 +91,7 @@ impl Element {
     ///
     /// > **Framework-internal.** Not part of the public API.
     /// >
-    /// > `loomis-runtime` needs the component instance back in order to drive rendering.
+    /// > `loomer-runtime` needs the component instance back in order to drive rendering.
     /// > Rust does not allow moving a field out of `&mut self`, so it is taken explicitly.
     pub fn take_component(&mut self) -> Option<Box<dyn Component>> {
         self.root.take()
@@ -103,7 +103,7 @@ impl Element {
 /// This lets the framework convert component values without special-casing each type:
 ///
 /// ```
-/// use loomis_core::element::{Component, Element};
+/// use loomer_core::element::{Component, Element};
 ///
 /// struct Hello;
 /// impl Component for Hello {

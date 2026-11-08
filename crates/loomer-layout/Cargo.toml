@@ -1,5 +1,5 @@
 [package]
-name = "loomis-layout"
+name = "loomer-layout"
 version.workspace = true
 edition.workspace = true
 publish.workspace = true

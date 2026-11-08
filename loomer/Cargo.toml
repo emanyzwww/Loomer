@@ -1,0 +1,9 @@
+[package]
+name = "loomer"
+version.workspace = true
+edition.workspace = true
+publish = false
+
+[dependencies]
+loomer-core = { path = "../crates/loomer-core" }
+loomer-runtime = { path = "../crates/loomer-runtime" }

@@ -1,7 +1,7 @@
 //! Event loop and window lifecycle.
 //!
 //! [`run`] creates the event loop, opens one window, and forwards backend activity to an
-//! [`AppHandler`], which `loomis-runtime` implements. This layer drives the handler; it never
+//! [`AppHandler`], which `loomer-runtime` implements. This layer drives the handler; it never
 //! interprets what the handler does with the events.
 //!
 //! # Loop rules
@@ -16,7 +16,7 @@
 use crate::error::Error;
 use crate::event::{self, Event};
 use crate::window::Window;
-use loomis_core::window::WindowOptions;
+use loomer_core::window::WindowOptions;
 use winit::application::ApplicationHandler;
 use winit::event::WindowEvent;
 use winit::event_loop::{ActiveEventLoop, ControlFlow, EventLoop};
@@ -88,7 +88,7 @@ impl ApplicationHandler for PlatformApp {
 
         // resumed returns (), so `?` is unavailable; report and stop instead.
         let Ok(inner) = event_loop.create_window(attrs) else {
-            eprintln!("[loomis] failed to create window");
+            eprintln!("[loomer] failed to create window");
             event_loop.exit();
             return;
         };
@@ -110,7 +110,7 @@ impl ApplicationHandler for PlatformApp {
                 }
             }
             _ => {
-                // Translate into Loomis events so winit types stay in this crate.
+                // Translate into Loomer events so winit types stay in this crate.
                 if let Some(ev) = event::translate(&event, self.scale) {
                     self.handler.event(ev);
                     if let Some(window) = &self.window {

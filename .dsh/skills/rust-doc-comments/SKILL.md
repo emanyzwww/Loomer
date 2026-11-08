@@ -1,6 +1,6 @@
 ---
 name: rust-doc-comments
-description: "Write, audit, and update English rustdoc comments in Loomis Rust sources, with a Chinese mirror for review; the scope can be a crate, a file, or a single item."
+description: "Write, audit, and update English rustdoc comments in Loomer Rust sources, with a Chinese mirror for review; the scope can be a crate, a file, or a single item."
 whenToUse: "Use when the user asks to write, fill in, audit, review, update, or translate documentation comments (//!, ///) in Rust files."
 ---
 
@@ -12,7 +12,7 @@ and hand back a **Chinese mirror** for review.
 - English is the only comment language that enters a `.rs` file.
 - Chinese is a review aid only and never enters version control.
 - Comments describe the **current state** of the code. No milestones, no roadmap, no third-party frameworks.
-- Loomis is a Rust desktop GUI framework organized as a Cargo workspace.
+- Loomer is a Rust desktop GUI framework organized as a Cargo workspace.
 
 Do not change code, do not commit, do not explain the writing process.
 
@@ -34,14 +34,14 @@ Accept a range and optional exclusions. Resolve every form to an explicit item l
 
 | Form                                   | Scope                                      |
 |----------------------------------------|--------------------------------------------|
-| `crates/loomis-core/src/color.rs`      | Whole file                                 |
-| `crates/loomis-core/src/`              | All sources of that crate                  |
+| `crates/loomer-core/src/color.rs`      | Whole file                                 |
+| `crates/loomer-core/src/`              | All sources of that crate                  |
 | `color.rs::Color`                      | One type, including its fields and methods |
 | `color.rs::Color::rgba`                | One method                                 |
 | `color.rs::Color.r`                    | One field                                  |
 | `a.rs,b.rs --exclude tests/,examples/` | Several targets with exclusions            |
 
-- Default when the user gives no range: tracked `crates/*/src/` and `loomis/src/`.
+- Default when the user gives no range: tracked `crates/*/src/` and `loomer/src/`.
 - Always excluded unless explicitly requested: `target/`, `.dsh/`, `examples/`, `tests/`, `benches/`, `build.rs`.
 - Print the resolved scope (file count and item count) before starting, so the range is visible.
 - Only read files inside the resolved scope. Never enumerate the workspace.

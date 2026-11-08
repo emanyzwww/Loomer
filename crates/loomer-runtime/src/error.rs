@@ -7,7 +7,7 @@
 #[derive(Debug)]
 pub enum Error {
     /// The platform layer failed to bring up or run the window.
-    Platform(loomis_platform::Error),
+    Platform(loomer_platform::Error),
 }
 
 /// Result type used by the runtime.

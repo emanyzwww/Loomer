@@ -76,7 +76,7 @@ Rules for sentences:
 - No contractions: write `Do not`, not `Don't`.
 - One idea per sentence.
 - Oxford comma in lists of three or more.
-- Backticks around identifiers: `` `f32` ``, `` `Option<Size>` ``, `` `loomis_core::geometry::Size` ``.
+- Backticks around identifiers: `` `f32` ``, `` `Option<Size>` ``, `` `loomer_core::geometry::Size` ``.
 - Half-width punctuation and spaces around Latin text.
 
 ## 5. Links
@@ -133,7 +133,7 @@ Note block:
 ```markdown
 /// > **Framework-internal.** Not part of the public API.
 /// >
-/// > `loomis-runtime` needs the component instance back in order to drive rendering.
+/// > `loomer-runtime` needs the component instance back in order to drive rendering.
 ```
 
 ## 8. Anti-patterns

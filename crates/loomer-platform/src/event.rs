@@ -3,7 +3,7 @@
 //! The layer translates `winit` window events into [`Event`] values, so no `winit` type crosses
 //! into the layers above.
 
-use loomis_core::geometry::Size;
+use loomer_core::geometry::Size;
 
 /// An event reported by the platform layer.
 ///

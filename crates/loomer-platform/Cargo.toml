@@ -1,7 +1,9 @@
 [package]
-name = "loomis-core"
+name = "loomer-platform"
 version.workspace = true
 edition.workspace = true
 publish.workspace = true
 
 [dependencies]
+loomer-core = { path = "../loomer-core" }
+winit.workspace = true
