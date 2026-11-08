@@ -5,3 +5,5 @@ edition.workspace = true
 publish = false
 
 [dependencies]
+loomis-core = { path = "../crates/loomis-core" }
+loomis-runtime = { path = "../crates/loomis-runtime" }

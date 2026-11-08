@@ -5,3 +5,5 @@ edition.workspace = true
 publish.workspace = true
 
 [dependencies]
+loomis-core = { path = "../loomis-core" }
+loomis-platform = { path = "../loomis-platform" }
