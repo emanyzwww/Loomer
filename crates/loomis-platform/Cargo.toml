@@ -5,3 +5,5 @@ edition.workspace = true
 publish.workspace = true
 
 [dependencies]
+loomis-core = { path = "../loomis-core" }
+winit.workspace = true

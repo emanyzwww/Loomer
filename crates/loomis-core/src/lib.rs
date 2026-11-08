@@ -5,9 +5,10 @@
 //!
 //! | Module | Contents |
 //! |---|---|
-//! | [`geometry`] | Sizes, positions, and rectangles |
 //! | [`color`] | Colors |
 //! | [`element`] | Components and UI descriptions |
+//! | [`geometry`] | Sizes, positions, and rectangles |
+//! | [`window`] | Window creation options |
 //!
 //! # Position in the layering
 //!
@@ -32,3 +33,4 @@
 pub mod color;
 pub mod element;
 pub mod geometry;
+pub mod window;
