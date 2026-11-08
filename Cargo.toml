@@ -6,6 +6,13 @@ resolver = "3"
 version = "0.0.0"
 edition = "2024"
 publish = false
+authors = ["emanyzwww"]
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/emanyzwww/Loomer"
+readme = "README.md"
 
 [workspace.dependencies]
 winit = "0.30.13"
+loomer-core = { path = "crates/loomer-core", version = "0.0.0" }
+loomer-platform = { path = "crates/loomer-platform", version = "0.0.0" }
+loomer-runtime = { path = "crates/loomer-runtime", version = "0.0.0" }

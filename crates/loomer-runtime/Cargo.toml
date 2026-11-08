@@ -2,8 +2,15 @@
 name = "loomer-runtime"
 version.workspace = true
 edition.workspace = true
-publish.workspace = true
+publish = true
+authors.workspace = true
+description = "Application runtime for Loomer: window lifecycle and event-loop integration."
+license.workspace = true
+repository.workspace = true
+readme.workspace = true
+keywords = ["gui", "runtime"]
+categories = ["gui"]
 
 [dependencies]
-loomer-core = { path = "../loomer-core" }
-loomer-platform = { path = "../loomer-platform" }
+loomer-core.workspace = true
+loomer-platform.workspace = true

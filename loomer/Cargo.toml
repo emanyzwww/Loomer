@@ -2,8 +2,15 @@
 name = "loomer"
 version.workspace = true
 edition.workspace = true
-publish = false
+publish = true
+authors.workspace = true
+description = "A cross-platform desktop GUI framework for Rust."
+license.workspace = true
+repository.workspace = true
+readme.workspace = true
+keywords = ["gui", "ui", "desktop", "framework", "windowing"]
+categories = ["gui"]
 
 [dependencies]
-loomer-core = { path = "../crates/loomer-core" }
-loomer-runtime = { path = "../crates/loomer-runtime" }
+loomer-core.workspace = true
+loomer-runtime.workspace = true

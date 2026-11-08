@@ -2,8 +2,15 @@
 name = "loomer-platform"
 version.workspace = true
 edition.workspace = true
-publish.workspace = true
+publish = true
+authors.workspace = true
+description = "Platform layer for Loomer: winit-backed windows, the event loop, and event translation."
+license.workspace = true
+repository.workspace = true
+readme.workspace = true
+keywords = ["gui", "windowing", "winit"]
+categories = ["gui"]
 
 [dependencies]
-loomer-core = { path = "../loomer-core" }
+loomer-core.workspace = true
 winit.workspace = true
