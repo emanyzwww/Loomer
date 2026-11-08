@@ -1,0 +1,18 @@
+# AI
+/.ai/
+/.dsh/*
+!/.dsh/skills/
+/.codex/
+/.claude/
+
+# IDEs
+/.vscode/
+/.idea/
+/.openidea/
+
+# OS
+/desktop.ini
+/OS_Store
+
+# Build artifacts
+/target/
