@@ -74,7 +74,15 @@ without commits.
 - Apply path filters when the user limits paths.
 - Skip auto-generated files; do not analyze them.
 
-### 2 Read every file
+**The range is the only source of truth.** Only paths printed by the range command are in scope; everything else in the
+working tree does not exist for this task. Never enumerate, size, or read the workspace: no `Get-ChildItem`, `find`,
+`ls -R`, `tree`, `du`, no file-size or timestamp listings, no `git status --ignored`. Paths ignored by the project
+(`target/`, `.dsh/temp/`, `.idea/`, `node_modules/`, ...) are out of range by definition and are never reference
+material. Never use `git status` as a file list either; only the range command defines the file list. All discovery is
+git-only: `git diff --cached --name-status`, `git diff --name-status`, `git ls-files`; use `git check-ignore -v <path>`
+only to confirm why a path is absent.
+
+### 2 Read every in-range file
 
 | Range            | Method                                                                       |
 |------------------|------------------------------------------------------------------------------|
@@ -85,12 +93,14 @@ without commits.
 
 - Never read staged files with plain `git diff`; it only shows unstaged changes.
 - Read truncated output to the end. Never skip a file or guess from its name.
+- Read only in-range files, once each; never open a file because it looks related or lives nearby.
 
 ### 3 Classify
 
 For each file, record:
 
-- Auto-generated or unrelated → drop.
+- Auto-generated or unrelated → drop. Lockfiles (`Cargo.lock`), `target/`, `dist/`, `node_modules/`, vendored
+  sources, generated bindings and minified bundles are auto-generated; never open them.
 - Change nature → group.
 - Owning package → scope.
 - Mergeable with other files into one logical change.
@@ -239,18 +249,20 @@ Everything else: output directly without questions or explanation.
 
 ## 5. Common Mistakes
 
-| Mistake                                 | Correct                             |
-|-----------------------------------------|-------------------------------------|
-| One block only                          | Chinese first, English second       |
-| Blocks differ in count or order         | Match line by line                  |
-| Subject capitalized, points lowercase   | Subject lowercase, points uppercase |
-| Trailing period                         | None                                |
-| Over 72 characters                      | Compress or split                   |
-| Points out of order                     | Group and sort                      |
-| `git diff HEAD` without HEAD            | Read the file itself                |
-| Invented scope                          | Derive from the path                |
-| Auto-generated changes in the body      | Skip them                           |
-| Chinese block treated as commit content | Only the English block is committed |
+| Mistake                                  | Correct                             |
+|------------------------------------------|-------------------------------------|
+| One block only                           | Chinese first, English second       |
+| Blocks differ in count or order          | Match line by line                  |
+| Subject capitalized, points lowercase    | Subject lowercase, points uppercase |
+| Trailing period                          | None                                |
+| Over 72 characters                       | Compress or split                   |
+| Points out of order                      | Group and sort                      |
+| `git diff HEAD` without HEAD             | Read the file itself                |
+| Invented scope                           | Derive from the path                |
+| Auto-generated changes in the body       | Skip them                           |
+| Listing the workspace tree or file sizes | Use the git range output only       |
+| Reading ignored paths such as `target/`  | Out-of-range paths never exist      |
+| Chinese block treated as commit content  | Only the English block is committed |
 
 ## 6. Hard Rules
 
@@ -262,4 +274,7 @@ Never:
 
 - create, modify, delete, or rename any project file
 - include out-of-range or generated content in the message
+- enumerate or inspect the working tree outside the range
+- read, size, or mention ignored paths such as `target/`, `.dsh/temp/`, `.idea/`
+- run exploratory commands; every command is a git range command or a read of an in-range file
 - guess instead of reading
