@@ -9,12 +9,12 @@ A cross-platform desktop GUI framework for Rust.
 
 | Crate                                                                                    | Role                                                         |
 |------------------------------------------------------------------------------------------|--------------------------------------------------------------|
-| [`loomer`](https://github.com/emanyzwww/Loomer/tree/dev/loomer)                          | Facade — the only crate applications should depend on        |
-| [`loomer-runtime`](https://github.com/emanyzwww/Loomer/tree/dev/crates/loomer-runtime)   | Application runtime: window lifecycle and the event loop     |
-| [`loomer-platform`](https://github.com/emanyzwww/Loomer/tree/dev/crates/loomer-platform) | Platform layer: `winit`-backed windows and event translation |
-| [`loomer-layout`](https://github.com/emanyzwww/Loomer/tree/dev/crates/loomer-layout)     | Layout engine (work in progress)                             |
-| [`loomer-render`](https://github.com/emanyzwww/Loomer/tree/dev/crates/loomer-render)     | Rendering layer (work in progress)                           |
-| [`loomer-core`](https://github.com/emanyzwww/Loomer/tree/dev/crates/loomer-core)         | Core data types: colors, geometry, elements, window options  |
+| [`loomer`](https://github.com/emanyzwww/Loomer/tree/master/loomer)                          | Facade — the only crate applications should depend on        |
+| [`loomer-runtime`](https://github.com/emanyzwww/Loomer/tree/master/crates/loomer-runtime)   | Application runtime: window lifecycle and the event loop     |
+| [`loomer-platform`](https://github.com/emanyzwww/Loomer/tree/master/crates/loomer-platform) | Platform layer: `winit`-backed windows and event translation |
+| [`loomer-layout`](https://github.com/emanyzwww/Loomer/tree/master/crates/loomer-layout)     | Layout engine (work in progress)                             |
+| [`loomer-render`](https://github.com/emanyzwww/Loomer/tree/master/crates/loomer-render)     | Rendering layer (work in progress)                           |
+| [`loomer-core`](https://github.com/emanyzwww/Loomer/tree/master/crates/loomer-core)         | Core data types: colors, geometry, elements, window options  |
 
 The layered crates are implementation details of the framework and may be restructured without
 notice. Application code depends on `loomer` only.
@@ -33,8 +33,8 @@ fn main() -> loomer::Result<()> {
 
 Licensed under either of
 
-- Apache License, Version 2.0 ([LICENSE-APACHE](https://github.com/emanyzwww/Loomer/blob/dev/LICENSE-APACHE))
-- MIT license ([LICENSE-MIT](https://github.com/emanyzwww/Loomer/blob/dev/LICENSE-MIT))
+- Apache License, Version 2.0 ([LICENSE-APACHE](https://github.com/emanyzwww/Loomer/blob/master/LICENSE-APACHE))
+- MIT license ([LICENSE-MIT](https://github.com/emanyzwww/Loomer/blob/master/LICENSE-MIT))
 
 at your option.
 
