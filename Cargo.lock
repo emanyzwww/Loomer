@@ -522,7 +522,7 @@ checksum = "5d15f86d12da44cd8d4ec3c73984537eb7f4cadcb9776a575a0a8a05ca11005c"
 
 [[package]]
 name = "loomis"
-version = "0.1.0"
+version = "0.0.0"
 dependencies = [
  "loomis-core",
  "loomis-runtime",
@@ -530,15 +530,15 @@ dependencies = [
 
 [[package]]
 name = "loomis-core"
-version = "0.1.0"
+version = "0.0.0"
 
 [[package]]
 name = "loomis-layout"
-version = "0.1.0"
+version = "0.0.0"
 
 [[package]]
 name = "loomis-platform"
-version = "0.1.0"
+version = "0.0.0"
 dependencies = [
  "loomis-core",
  "winit",
@@ -546,11 +546,11 @@ dependencies = [
 
 [[package]]
 name = "loomis-render"
-version = "0.1.0"
+version = "0.0.0"
 
 [[package]]
 name = "loomis-runtime"
-version = "0.1.0"
+version = "0.0.0"
 dependencies = [
  "loomis-core",
  "loomis-platform",
